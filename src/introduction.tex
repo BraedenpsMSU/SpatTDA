@@ -1,0 +1,64 @@
+%TODO write make file
+%TODO maybe not focused enough
+    Prostate Cancer (PCa) is the second leading cause of cancer-deaths for men in the United States and is expected to make
+    up 20\% of new cancer diagnosis in men in 2019\cite{siegel2019cancer}.
+    The Gleason grading system is currently the primary system for grading PCa's architecture and stands as one of the
+        most important predictors of prognosis.
+    The Gleason system divides the multiple architectural patterns of Prostate cancer into 5 categories.
+    The Gleason score is assigned to a whole slide image of a prostate biopsy notating which of these two of these two
+        architectural patterns groups are most prevalent in the sample.
+    However, the gleason score also suffer from high intraobserver and interobserver variability when being assigned by
+    a Pathologist who must visually inspect the cancer slides.\cite{walsh2013gleason}
+    This produces as need for new effective quantitative measures on prostate cancer.
+
+    The emergence of digital pathology has enabled researchers to examine digital histopathological slides with greater
+        detail.
+    Two areas that have been applied to Histopathological data are topological data analysis (TDA) and Spatial analysis.
+    % sources here
+    Both of these methods aim to examine the spatial properties of data but differ in their focus.
+    TDA is uniquely suited to examining the shape of data while spatial analysis focuses mainly\com{a bit of strong word} on questions of
+    spatial dependence, spatial association, and spatial heterogeneity.\cite{de_smith_geospatial_2018}
+
+    \com{WIP: mainly a list right now - adapted from notes. need to clean up add and citations}
+    Spatial Analysis has been used to examine the tumor mircoenvironment from an ecological perspective, examining cancer
+        and immune cell co-location and relating it to patient survival in estrogen receptor negative-breast cancer.
+    Similar work has shown that statistical hotspot analysis correlates with better prognosis as well.
+    Other studies demonstrated measures of spatial homogeneity in stromal cells was associated with good outcome for
+        patients with estrogen negative breast cancer patients.
+    Combinations of spatial statistics on CD68+ macrophages in human head and neck tumors have also been shown
+        accurately match human predictions. % This not the TDA paper.
+
+    TDA was successfully applied to breast cancer to identify subgroup of estrogen receptor positive breast cancer which
+        had an 100\% survival rate. %site - this should the gunnarson paper.
+    Persistent Homology (PH) is a specific method from TDA which has found great success when applied to cancer data.
+    A more detailed description of PH will be put off for now, and we will start with just describing some of it's notable
+        applications when examining Histop
+%    PH applies tools from algebraic topology to examine the number of connected components and $d-$voids a objects with
+%        respected to some parameter that defines the significance of each topological feature.
+    PH has also been applied to subtypes of breast cancer data where it was shown to be able to identity breast cancer
+        subtypes using the information provided by the distance between the nuclei in the sample cell.
+    On other breast cancer data, PH was able to use the tumor mircoenvironment to identify breast cancer subtypes as
+        well as predict patient survival.
+    PH is uniquely well suit to be applied to PCa as the gleason scale is based entirely on the cancer's architectural
+        pattern.
+    Here is has been show that PH can cluster a fine collection of prostate architectural pattern then used in producing
+        the gleason score.
+    PH has also been demonstrated to predict prostate cancer aggressiveness using machine learning models.
+
+
+
+%    The coarseness of the gleason grading scale can be viewed as a weakness of system.
+%    A solution to this can be found in the application of topological data analysis(TDA) to region of a slide.
+%    The key tool from TDA used in this approach is persistence homology which allows for the production of a ?qualitative?
+%        measure of the shape of the tissue and thus its architecture.
+
+%\section*{Spatial Analysis}
+%    Spatial Analysis is a branch of statistics that focus on handling questions that arise from data that a spatial component.
+%    Key concerns of spatial analysis are the examination of spatial relationships of data.
+%    These include questions of spatial dependence which investigate where measurements taken in close geographically proximatiy
+%        are statistically independent.
+%    As well as the ways on analyzing spatial heterogeneity, which is when quantity is unevenly distributed throughout space with possible
+%    sharp changes in the values even of proximity.
+%    Mathematically, Spatial Analysis come from models
+
+

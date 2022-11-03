@@ -1,0 +1,23 @@
+\subsection*{Mantel Analysis based Methods}
+    Mantel Analysis \com{check against langauge in\cite{dutilleul2011spatio}} are set of method base around the
+    Mantel statistics and is focused assessing measuring the linear association between two square distance matrices
+        of same dimension.
+    Given two matrices of distances $X$ and $Y$ the Mantel statistic is defined to be dot product the upper triangular
+    portion of the distance matrices as vectors:
+    \[z_{m} =  \sum_{i=0}^{n} \sum_{j=i+1}^{n} X_{i,j}Y_{i,j}\]
+    Likewise, there is also the standardized mantel statistics which is defined:
+    \[r_{m} =   \frac{1}{n(n-1)/2-1} \sum_{i=0}^{n} \sum_{j=i+1}^{n}
+                (X_{i,j}-\hat{\mu}_X)(Y_{i,j}-\hat{\mu}_Y)/\hat{\sigma}_X\hat{\sigma}_Y.
+    \]
+
+    Mantel statistics primarily are used in the context of Hypothesis testing where it applied into
+        related method called the mantel and partial mantel test.
+    These are both permutation test that work under assumptions that:
+    \begin{enumerate}
+        \item   Each $i$ row and column both correspond to the same sample
+        \item   The sample where taking independent of one another.
+    \end{enumerate} %TODO check these.
+
+    % Mantel Correlogram
+    % Modified mantel procedure
+    % Mantel relationships.

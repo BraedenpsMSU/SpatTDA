@@ -1,0 +1,22 @@
+#Intellij IDE settings
+/.idea/
+
+#latex_files
+/out/*.aux
+/out/*.log
+/out/*.synctex.gz
+/out/*.bbl
+/out/*.out
+/out/*.blg
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/out/WriteUp.aux
+/ScratchNotes/*
+

@@ -1,0 +1,35 @@
+%! Author = bden
+%! Date = 11/3/22
+
+% Preamble
+\documentclass[11pt]{article}
+\newcommand{\com}[1]{{\color{brown}{[ #1 ]}}}
+
+% Packages
+\usepackage{draft-sopp}
+\usepackage{hyperref}
+\title{Draft}
+\author{Braeden Sopp}
+\date{}
+
+% Document
+\begin{document}
+    \maketitle
+    %Introduction
+    \input{introduction}
+    %TDA section
+    \section*{Persistence Homology}
+    \input{ph}
+    % Add section for intensity function
+    %Methods Section
+    \section*{Methods}
+    \input{methods}
+
+
+
+
+    \bibliography{WriteUp}
+    \bibliographystyle{plain}
+
+\end{document}
+

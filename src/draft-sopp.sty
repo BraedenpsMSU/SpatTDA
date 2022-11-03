@@ -1,0 +1,54 @@
+%%
+%% This is based on the style sheet provided by 6064.sty at
+%% https://github.com/wangjohn/mit-courses/blob/master/6.046/takehome/6046.sty
+%%
+
+\def\fileversion{1.0}
+\def\filedate{2022/02/12}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{draft-sopp}
+
+
+% Some base packages
+\usepackage{amssymb, amsmath, amsfonts}		%% For math mode features - I think
+\usepackage{xcolor}				%% For color options
+\usepackage{float}				%% For some extra formating options
+\usepackage{url}				%% For urls and hyperlinks
+\usepackage{algorithm,algorithmic}		%% For algorithms
+\usepackage{graphicx}				%% For graphics
+\usepackage{tikz}
+
+% For formatting
+\usepackage{geometry}[margin=1.5cm]
+
+
+% Some symbol shortcuts
+
+% Standard Symbols
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Sp}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+
+% Complex and fields
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+
+% Emptyset
+\newcommand{\eset}{\emptyset}
+
+
+% Some commands brackets
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\norm}[1]{\left\| #1\right\|}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+
+% getting some theorems to work
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+
+

@@ -1,23 +1,46 @@
 \subsection*{Mantel Analysis based Methods}
-    Mantel Analysis \com{check against langauge in\cite{dutilleul2011spatio}} are set of method base around the
-    Mantel statistics and is focused assessing measuring the linear association between two square distance matrices
+    Mantel Analysis \com{check against langauge in \cite{dutilleul2011spatio}} are a set of methods base around the
+    Mantel statistics and are focused on assessing the linear association between two square distance matrices
         of same dimension.
-    Given two matrices of distances $X$ and $Y$ the Mantel statistic is defined to be dot product the upper triangular
+
+    Given two distance matrices $X$ and $Y$ the Mantel statistic is defined to be dot product the upper triangular
     portion of the distance matrices as vectors:
     \[z_{m} =  \sum_{i=0}^{n} \sum_{j=i+1}^{n} X_{i,j}Y_{i,j}\]
-    Likewise, there is also the standardized mantel statistics which is defined:
+    Likewise, there is also the standardized Mantel statistics which uses the Pearson's $r$ statistic instead:
     \[r_{m} =   \frac{1}{n(n-1)/2-1} \sum_{i=0}^{n} \sum_{j=i+1}^{n}
                 (X_{i,j}-\hat{\mu}_X)(Y_{i,j}-\hat{\mu}_Y)/\hat{\sigma}_X\hat{\sigma}_Y.
     \]
 
-    Mantel statistics primarily are used in the context of Hypothesis testing where it applied into
-        related method called the mantel and partial mantel test.
-    These are both permutation test that work under assumptions that:
+    Mantel statistics are primarily used in the context of Hypothesis testing where it is applied in two
+        related methods called the Mantel and partial Mantel test.
+    Here we will only be focusing only on the Mantel test.
+    The Mantel test is a permutation test that typically uses either Mantel statistic or the standardized Mantel statistic as the
+    test statistic and works under the assumptions that:
     \begin{enumerate}
-        \item   Each $i$ row and column both correspond to the same sample
-        \item   The sample where taking independent of one another.
-    \end{enumerate} %TODO check these.
+        \item   The $i$th row and column both correspond to the same sample/location.
+        \item   The samples are independent of one another.
+    \end{enumerate}
+    The null hypothesis for the Mantel test is that there is no linear association between the two matrices.
+    The test itself is preformed by permuting the rows and columns of one matrix while keeping the other fixed and recomputing
+        the test statistic for each permutation to form a reference distribution.
+    The value test value is then compared to the reference distribution to obtain a p-value.
 
-    % Mantel Correlogram
-    % Modified mantel procedure
-    % Mantel relationships.
+A more interesting use of the Mantel methodology and test statistic is the Mantel correlogram.
+The mantle correlogram is an innovative method to examine spatial correlation use in only distance matrices.
+The base procedure is performed by first dividing the range of the values of the geographic distance matrices into $N$ distance classes of equal size representing an interval of values in the geographic distance matrix.
+Then the $K$th distance class, we produce a model matrix $M(k)$ where an entry has the value $K$ if it falls into the $K$th distance class, otherwise it is set to 0 in $M(k)$.
+Then the standardized Mantel statistic between the model matrix and the response matrix is computed and the Mantel test procedure is performed.
+This forms a graph of Mantel statistics with respect to the distance classes which is called the Mantel correlogram.
+The interpretation of the resulting correlogram is then based on the shape of the significant values of the test.
+
+%TODO talk about the simulation studies examining the Mantel correlogram on conditional gaussian simulation data.
+
+%TODO talk about cancer grade/morphological Heterogenity and connect it back to Mantel correlogram.
+
+%TODO talk about need to verify results to non-euclidean distances and any possible simulation studies suitable
+% specific distance metric on PD or there summaries.
+
+%TODO Modification to Mantel correlogram procedure to allow examination of multiple regions which have the same property.
+%TODO decide on most meanful metric for comparisons.
+
+%TODO move on to persistence summaries after and possibly autocorrelation functions (or any method that is not bound by hypothesis testing).
